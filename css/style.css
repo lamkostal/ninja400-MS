@@ -1,0 +1,362 @@
+   
+        
+       @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+       :root{
+           --primary-green:#369d1d;
+           --primary-grey:#dadada;
+
+           --primary-text-color:rgb(51, 51, 51);
+           --secon-text-color:rgb(240, 240, 240);
+
+       }
+       html{
+           overflow-x:hidden;
+           scroll-behavior: smooth;
+        }
+        body { 
+           overflow-x:hidden;
+            margin: 0;
+            background-color: #000;
+            color: var(--secon-text-color);
+            font-family: 'Open Sans', sans-serif ;
+        }
+
+        img{max-width: 100%;}
+        header{
+            width: 100%;
+        }
+        nav{
+            width: 100%;
+            display: flex;
+            height: 40px;
+            position: absolute;
+            justify-content: flex-end;
+            z-index: 20;
+        }
+        .icons-container{
+            display: flex;
+            flex-shrink: 1;
+            padding: 20px;
+        }
+        .icon-link{
+            border:1px solid white;
+            margin:0 5px 0 0;
+            height: 40px;
+        }
+        .icon-link img{
+            margin:5px 10px;
+            width:30px;
+        }
+        .icon-link{
+            position: relative;
+        }
+        .icon-link::after{
+          
+            margin:20px 10px;
+            position: absolute;
+            left:0px;
+            top:40px;
+            left:0;
+            width:0px;
+            content:"";
+            border-bottom: 10px solid white;
+            border-radius: 10px;
+            z-index: 25;
+        }
+        .icon-link:hover:after{
+           
+            left:11px;
+            width:10px;
+          
+        }
+        .canvas-container{
+            position: relative;
+            max-width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            z-index: 1;
+            background-color: var(--primary-grey);
+        }
+        canvas {
+            max-width: 100%;
+            width:100%;
+            display: block;
+            z-index: 1;
+        }
+       
+
+        article{
+            z-index: 5;
+            position: relative;
+            /* min-height:100vh; */
+        }
+      
+        .container{
+            max-width:70%;
+            margin:auto;
+            padding:4rem 0 6rem;
+            }
+       .flex-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            }
+
+        .flex-row{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            }
+        .container-full{
+            max-width:100%;
+            margin:auto;
+            padding:6rem 0;
+        }
+        #description{
+                background:var( --primary-grey);
+                color:var(--primary-text-color);
+            }
+            .narrow-text{
+                display: block;
+                word-wrap: break-word;
+                max-width: 600px;
+                z-index: 10;
+                line-height: 2.2rem;
+                font-size:22px;
+            }
+            .narrow-text img {
+                position: relative;
+                padding: 50px 120px 0px 0px;
+                shape-outside: polygon(56px 48px, 75.4% 43px, 61.04% 35.91%, 56.94% 72.02%, 49.99% 82.72%, 150px 95.31%, 22px 95.15%);
+                float: left;
+                width: 250px;
+                
+            }
+            .bikeFront{
+                transition: all 0.5s ease-out;
+                transform: scale(0.5) ;
+                transform-origin: 50% 50%;
+            }
+            .shown{
+                transform: scale(1);
+               
+            }
+         @media (max-width:400px){
+            .container{
+                
+                max-width:90%;
+                margin:auto;
+                padding:3rem 0;
+                }
+            .narrow-text{
+                    max-width: 500px;
+                    font-size:18px;
+                }
+            .narrow-text img {
+                    position: relative;
+                    float: initial;
+                   
+                  
+                    width: 250px;
+                    
+                }
+               
+         }   
+         h1{
+            font-size: 45px;
+            color:var(--primary-text-color);
+            font-weight: 300;
+         }  
+           
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin:3rem;
+        }
+        /* ΧΡΩΜΜΑΤΑ */
+        .motion-bike{
+           position: absolute;
+           top:0;
+           left:0;
+            width:200px;
+            height:200px;
+            /* background-color: blue; */
+            background-image: url(https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/18EX400G_242GN2DRS3CG_A.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 2000;
+        }
+        svg{
+            /* transform:translateY(-10rem); */
+            top:-200px;
+            filter:blur(2px); 
+              }
+        #colors{
+            color:var(--primary-text-color);
+            background: var(--primary-green);
+            background: linear-gradient(182deg, rgba(218,218,218,1) 60%, rgba(54,157,29,1) 70%);
+        }
+        #colors img{
+            display: block;
+            width:500px;
+            max-width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+        #colors span{
+            color:#fff;
+            margin-top:-15px;
+            font-size:22px;
+            font-weight: 100;
+
+        }
+
+
+/* ΧΑΡΑΚΤΗΡΙΣΤΗΚΑ */
+
+#character{
+    color:var(--primary-text-color);
+    background: var( --primary-grey);
+}
+.table{
+    width:100%;
+  
+}
+ul{
+    list-style: none;
+    margin:20 0;
+    padding:0;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-item{
+    
+    width: 100%;
+    display: flex;
+    /* flex-grow: 1; */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+
+}
+.list-item:nth-child(odd){
+    background-color:#ffff;
+}
+.list-item *{
+    display: flex;
+    flex:2;
+    padding:10px;
+}
+.list-item__title{
+    padding-left:15px;
+    font-weight: bold;
+    flex:1;
+}
+
+
+/* ΓΚΑΛΕΡΙ */
+        #gallery{
+            margin-bottom:50vh;
+            background-color: black;
+           
+        }
+        .grid-container{
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+            grid-gap:20px;
+            transition: all 0.3s;
+        }
+        @media (min-width:1300px){
+            .grid-container:hover{
+                grid-gap:5px;
+               
+            }
+        }
+       
+
+        .grid-item{
+            display: grid;
+            overflow: hidden;
+          
+        }
+        .grid-item img{
+            transition: all 0.4s;
+        }
+        .grid-item img:hover{
+            transform:scale(1.2)
+        }
+
+        /* FOOTER */
+        #bottom{
+            width:100%;
+            position: fixed;
+            bottom: 0;
+            background: var(--primary-green);
+            z-index: 0;
+        }
+        #bottom>div{
+                
+
+            background: url(https://mcn-images.bauersecure.com/PageFiles/646888/kawasaki-ninja-400-1.jpg) ;
+            
+            background-size: cover;
+            background-position: 50% 60%;
+            width: 100%;
+        }
+        .half-h{
+            min-height:50vh;
+        }
+        .full-flex{
+            display: flex;
+            flex:1;
+        }
+      
+        .cta-button{
+
+            min-width:20vw;
+            padding:20px 40px;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            text-align: center;
+            color:black;
+            border:none;
+            transition: all 0.4s;
+          
+            padding:30px 50px;
+            border-radius: 00px;
+            font-size: 25px;
+           
+
+         } .cta-button:hover{
+            cursor:pointer;
+            box-shadow: 1px 1px 5px 4px rgb(226, 226, 226);
+            color: white;
+            background-color: black;
+         }
+        footer {
+            position: relative;
+            background: black;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 20px;
+            height:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+           
+        }
+        footer a, footer a:hover, footer a:active {
+           display: flex;
+
+        }
