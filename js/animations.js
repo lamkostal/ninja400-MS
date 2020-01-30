@@ -52,16 +52,16 @@ gsap.to(".motion-bike",{
  gsap.to('.color-bikes img',{
      ease:"power2.in",
      scale:1,
-    //  transformOrigin:"50% 50%",
      smoothOrigin:true,
-     translateX:"random(5,10)",
-     duration:0.5,
-    //  yoyo:true,
-     
+     translateX:"random(0,10)",
+     duration:0.6,
+     yoyo:true,
+     repeatRefresh:true,
+     repeat:-1,
      stagger:{
-         each :0.15,
-         repeat:-1,
-         repeatRefresh:true,
+         from:"random",
+         each :0.25,
+        
 
 
      }
