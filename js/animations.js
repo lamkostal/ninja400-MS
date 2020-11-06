@@ -68,3 +68,10 @@ gsap.to(".motion-bike",{
 
  })
 
+//  preloader
+
+let preloader=document.querySelector(".preloader");
+
+window.addEventListener('load', (event)=>{
+    console.log("all loaded")
+    preloader.classList.add("loaded")})
