@@ -1,3 +1,16 @@
+
+
+     //  preloader
+
+let preloader=document.querySelector(".preloader");
+
+window.addEventListener('load', (event)=>{
+    console.log("all loaded")
+    preloader.classList.add("loaded")})
+    
+    
+    // debounce 
+
 function debounce(func, wait, immediate) {
 	var timeout;
 	return function() {
@@ -34,8 +47,8 @@ function check(e){
 document.addEventListener("scroll",debounce(check,30))
 
 
-gsap.set("motion-bike",{
-    transformOrigin:"0% 100%",
+gsap.set(".motion-bike",{
+    transformOrigin:"0% 0%",
     smoothOrigin:true,
 })
 gsap.to(".motion-bike",{
@@ -68,10 +81,3 @@ gsap.to(".motion-bike",{
 
  })
 
-//  preloader
-
-let preloader=document.querySelector(".preloader");
-
-window.addEventListener('load', (event)=>{
-    console.log("all loaded")
-    preloader.classList.add("loaded")})
